@@ -43,6 +43,20 @@ html,body,.container,.swiper-container {
   /* animation-direction:alternate; */
 }
 
+.audio-play-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  color: #f00;
+  border: 1px solid #f00;
+  text-align: center;
+  z-index: 555;
+}
+
 @keyframes move {
   from {
     transform: translateY(0px);
@@ -51,5 +65,13 @@ html,body,.container,.swiper-container {
   to {
     transform: translateY(-10px);
     opacity: 0;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
   }
 }
