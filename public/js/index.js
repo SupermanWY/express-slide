@@ -32,6 +32,7 @@ $(function() {
 
     return function() {
       audio.play().then(function() {
+        hasPlayed = true
         onAudioStart()
       }).catch(function () {
         var arr = ['touchend', 'click', 'doubleclick', 'keydown']
