@@ -1,12 +1,17 @@
 $(function() {
   var isPlaying = false
   var html = ''
-  for (var i = 1; i <= 30; i++) {
-    html += '<div class="swiper-slide"><img src="./img/s'+ i +'.jpg" /></div>'
+  for (var i = 1; i <= 38; i++) {
+    html +=
+      '<div class="swiper-slide">'+
+        '<img class="swiper-lazy" data-src="./img/s'+ i +'.jpg" />'+
+        '<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>'+
+      '</div>'
   }
   $('.swiper-wrapper').html(html)
 
   var swiper = new Swiper('.swiper-container', {
+    lazy: true,
     direction: 'vertical',
     loop: true,
     pagination: {
